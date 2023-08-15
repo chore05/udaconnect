@@ -1,7 +1,7 @@
 import os
 
 from kafka import KafkaConsumer
-from helper import save_user_location
+from helper_file import save_user_location
 
 TOPIC_NAME = os.environ["TOPIC_NAME"]
 KAFKA_SERVER = os.environ["KAFKA_SERVER"]
