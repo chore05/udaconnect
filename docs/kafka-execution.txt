@@ -1,0 +1,15 @@
+### UNIX-like system installation
+Follow the following steps for Unix- like systems
+
+1. Install helm (at least version 3.2.1)
+
+2. Include the helm repo from bitnami
+$ helm repo add bitnami https://charts.bitnami.com/bitnami
+
+3. Run helm udaconnect-kafka-server
+$ helm install udaconnect-kafka-server bitnami/kafka
+
+#####################
+### SAMPLE OUTPUT ###
+#####################
+

@@ -1,0 +1,44 @@
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    service: app-frontend
+  name: app-frontend
+spec:
+  ports:
+  - name: "3000-30002"
+    port: 3000
+    targetPort: 3000
+    nodePort: 30002
+  selector:
+    service: app-frontend
+  type: NodePort
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    service: app-frontend
+  name: app-frontend
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      service: app-frontend
+  template:
+    metadata:
+      labels:
+        service: app-frontend
+    spec:
+      containers:
+      - image: chore05/app-frontend:latest
+        name: app-frontend
+        imagePullPolicy: Always
+        resources:
+          requests:
+            memory: "128Mi"
+            cpu: "64m"
+          limits:
+            memory: "256Mi"
+            cpu: "256m"
+      restartPolicy: Always

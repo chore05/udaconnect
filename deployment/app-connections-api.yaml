@@ -1,0 +1,68 @@
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: app-connections-api
+  name: app-connections-api
+spec:
+  ports:
+  - name: "5000-30001"
+    nodePort: 30001
+    port: 5000
+    protocol: TCP
+    targetPort: 5000
+  selector:
+    app: app-connections-api
+  type: NodePort
+
+
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: app-connections-api
+  name: app-connections-api
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: app-connections-api
+  template:
+    metadata:
+      labels:
+        app: app-connections-api
+    spec:
+      containers:
+      - image: chore05/app-connections-api:latest
+        name: app-connections-api
+        imagePullPolicy: Always
+        env:
+        - name: DB_USERNAME
+          valueFrom:
+            configMapKeyRef:
+              name: db-env
+              key: DB_USERNAME
+        - name: DB_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: db-secret
+              key: DB_PASSWORD
+        - name: DB_NAME
+          valueFrom:
+            configMapKeyRef:
+              name: db-env
+              key: DB_NAME
+        - name: DB_HOST
+          valueFrom:
+            configMapKeyRef:
+              name: db-env
+              key: DB_HOST
+        - name: DB_PORT
+          valueFrom:
+            configMapKeyRef:
+              name: db-env
+              key: DB_PORT
+      restartPolicy: Always
+  
