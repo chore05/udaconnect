@@ -1,8 +1,8 @@
 {
 	"info": {
-		"_postman_id": "878cc782-c69e-4b20-9594-27378320c4c3",
+		"_postman_id": "3e0fbc42-add1-4fe6-850a-66ba7e21baf6",
 		"name": "API documentation",
-		"description": "This is Udaconnect API",
+		"description": "This is App API",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
@@ -28,7 +28,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n  \"person_id\": 2,\n  \"longitude\": \"80.124052\",\n  \"latitude\": \"-10.571254\",\n  \"creation_time\": \"12:45\",\n  \"id\": 7\n}",
+									"raw": "{\n  \"person_id\": 4,\n  \"longitude\": \"78.85412\",\n  \"latitude\": \"-5.45782\",\n  \"creation_time\": \"10:55\",\n  \"id\": 8\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -46,7 +46,7 @@
 										""
 									]
 								},
-								"description": "By putting the correct location data, you can create a new location in the system"
+								"description": "By putting the correct location data, one can create new location"
 							},
 							"response": [
 								{
@@ -56,7 +56,7 @@
 										"header": [],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n  \"person_id\": 2,\n  \"longitude\": \"80.124052\",\n  \"latitude\": \"-10.571254\",\n  \"creation_time\": \"12:45\",\n  \"id\": 7\n}",
+											"raw": "{\n  \"person_id\": 4,\n  \"longitude\": \"78.85412\",\n  \"latitude\": \"-5.45782\",\n  \"creation_time\": \"10:55\",\n  \"id\": 8\n}",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -85,7 +85,7 @@
 										}
 									],
 									"cookie": [],
-									"body": "[\n  {\n    \"id\": 1,\n    \"person_id\": 1,\n    \"longitude\": \"78.124052\",\n    \"latitude\": \"-4.571254\",\n    \"creation_time\": \"12:45\"\n  },\n  {\n    \"id\": 1,\n    \"person_id\": 1,\n    \"longitude\": \"78.124052\",\n    \"latitude\": \"-4.571254\",\n    \"creation_time\": \"12:45\"\n  }\n]"
+									"body": "[\n  {\n    \"id\": 4,\n    \"person_id\": 2,\n    \"longitude\": \"85.785412\",\n    \"latitude\": \"-5.967854\",\n    \"creation_time\": \"11:35\"\n  },\n  {\n    \"id\": 4,\n    \"person_id\": 2,\n    \"longitude\": \"85.785412\",\n    \"latitude\": \"-5.967854\",\n    \"creation_time\": \"11:35\"\n  }\n]"
 								},
 								{
 									"name": "Bad input",
@@ -94,7 +94,7 @@
 										"header": [],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n  \"person_id\": 2,\n  \"longitude\": \"80.124052\",\n  \"latitude\": \"-10.571254\",\n  \"creation_time\": \"12:45\",\n  \"id\": 7\n}",
+											"raw": "{\n  \"person_id\": 4,\n  \"longitude\": \"78.85412\",\n  \"latitude\": \"-5.45782\",\n  \"creation_time\": \"10:55\",\n  \"id\": 8\n}",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -150,16 +150,16 @@
 									"variable": [
 										{
 											"key": "location_id",
-											"value": "-66007510",
+											"value": "-37505173",
 											"description": "(Required) Numeric ID of the Location to get"
 										}
 									]
 								},
-								"description": "Gets the location information a location id"
+								"description": "Gets the location information with location id"
 							},
 							"response": [
 								{
-									"name": "Successfully retrieved requested location data",
+									"name": "Successfully retrieved location data",
 									"originalRequest": {
 										"method": "GET",
 										"header": [],
@@ -176,7 +176,7 @@
 											"variable": [
 												{
 													"key": "location_id",
-													"value": "-66007510",
+													"value": "-37505173",
 													"description": "(Required) Numeric ID of the Location to get"
 												}
 											]
@@ -192,7 +192,7 @@
 										}
 									],
 									"cookie": [],
-									"body": "[\n  {\n    \"id\": 1,\n    \"person_id\": 1,\n    \"longitude\": \"78.124052\",\n    \"latitude\": \"-4.571254\",\n    \"creation_time\": \"12:45\"\n  },\n  {\n    \"id\": 1,\n    \"person_id\": 1,\n    \"longitude\": \"78.124052\",\n    \"latitude\": \"-4.571254\",\n    \"creation_time\": \"12:45\"\n  }\n]"
+									"body": "[\n  {\n    \"id\": 4,\n    \"person_id\": 2,\n    \"longitude\": \"85.785412\",\n    \"latitude\": \"-5.967854\",\n    \"creation_time\": \"11:35\"\n  },\n  {\n    \"id\": 4,\n    \"person_id\": 2,\n    \"longitude\": \"85.785412\",\n    \"latitude\": \"-5.967854\",\n    \"creation_time\": \"11:35\"\n  }\n]"
 								},
 								{
 									"name": "Bad input",
@@ -212,7 +212,7 @@
 											"variable": [
 												{
 													"key": "location_id",
-													"value": "-66007510",
+													"value": "-37505173",
 													"description": "(Required) Numeric ID of the Location to get"
 												}
 											]
@@ -263,7 +263,7 @@
 											"variable": [
 												{
 													"key": "person_id",
-													"value": "-66007510",
+													"value": "-37505173",
 													"description": "(Required) Numeric ID of the person to get"
 												}
 											]
@@ -289,7 +289,7 @@
 													"variable": [
 														{
 															"key": "person_id",
-															"value": "-66007510",
+															"value": "-37505173",
 															"description": "(Required) Numeric ID of the person to get"
 														}
 													]
@@ -305,7 +305,7 @@
 												}
 											],
 											"cookie": [],
-											"body": "[\n  {\n    \"id\": 1,\n    \"first_name\": \"Paul\",\n    \"last_name\": \"McAfee\",\n    \"company_name\": \"Helios\"\n  },\n  {\n    \"id\": 1,\n    \"first_name\": \"Paul\",\n    \"last_name\": \"McAfee\",\n    \"company_name\": \"Helios\"\n  }\n]"
+											"body": "[\n  {\n    \"id\": 5,\n    \"first_name\": \"Paulie\",\n    \"last_name\": \"Magnet\",\n    \"company_name\": \"Apple\"\n  },\n  {\n    \"id\": 5,\n    \"first_name\": \"Paulie\",\n    \"last_name\": \"Magnet\",\n    \"company_name\": \"Apple\"\n  }\n]"
 										},
 										{
 											"name": "bad input parameter",
@@ -325,7 +325,7 @@
 													"variable": [
 														{
 															"key": "person_id",
-															"value": "-66007510",
+															"value": "-37505173",
 															"description": "(Required) Numeric ID of the person to get"
 														}
 													]
@@ -361,7 +361,7 @@
 													"variable": [
 														{
 															"key": "person_id",
-															"value": "-66007510",
+															"value": "-37505173",
 															"description": "(Required) Numeric ID of the person to get"
 														}
 													]
@@ -382,7 +382,7 @@
 									]
 								},
 								{
-									"name": "Gets person's connections based on his/her id",
+									"name": "Gets connections based on person id",
 									"request": {
 										"method": "GET",
 										"header": [
@@ -406,7 +406,7 @@
 												{
 													"key": "distance",
 													"value": "",
-													"description": "Distance to a given user in meters"
+													"description": "Distance in meters"
 												},
 												{
 													"key": "end_date",
@@ -423,11 +423,11 @@
 												{
 													"key": "person_Id",
 													"value": "",
-													"description": "(Required) Numeric ID of the person to get his/her connections"
+													"description": "(Required) Numeric ID of the person to get connections for"
 												}
 											]
 										},
-										"description": "Gets person's connections based on his/her id"
+										"description": "Gets connections based on person id"
 									},
 									"response": [
 										{
@@ -464,7 +464,7 @@
 														{
 															"key": "person_Id",
 															"value": "",
-															"description": "(Required) Numeric ID of the person to get his/her connections"
+															"description": "(Required) Numeric ID of the person to get connections for"
 														}
 													]
 												}
@@ -479,7 +479,7 @@
 												}
 											],
 											"cookie": [],
-											"body": "[\n  {\n    \"id\": 1,\n    \"start_date\": \"12 June\",\n    \"end_date\": \"14 July\",\n    \"distance\": \"Helios\"\n  },\n  {\n    \"id\": 1,\n    \"start_date\": \"12 June\",\n    \"end_date\": \"14 July\",\n    \"distance\": \"Helios\"\n  }\n]"
+											"body": "[\n  {\n    \"id\": 4,\n    \"start_date\": \"12 July\",\n    \"end_date\": \"14 July\",\n    \"distance\": \"Axes\"\n  },\n  {\n    \"id\": 4,\n    \"start_date\": \"12 July\",\n    \"end_date\": \"14 July\",\n    \"distance\": \"Axes\"\n  }\n]"
 										},
 										{
 											"name": "bad input parameter",
@@ -515,7 +515,7 @@
 														{
 															"key": "person_Id",
 															"value": "",
-															"description": "(Required) Numeric ID of the person to get his/her connections"
+															"description": "(Required) Numeric ID of the person to get connections for"
 														}
 													]
 												}
@@ -556,11 +556,11 @@
 										"persons"
 									]
 								},
-								"description": "Gets the people information for all users in the PersonAPI"
+								"description": "Gets the people information for all users in the api"
 							},
 							"response": [
 								{
-									"name": "Successfully retrieved requested persons data",
+									"name": "Successfully retrieved persons data",
 									"originalRequest": {
 										"method": "GET",
 										"header": [],
@@ -585,7 +585,7 @@
 										}
 									],
 									"cookie": [],
-									"body": "[\n  {\n    \"id\": 1,\n    \"first_name\": \"Paul\",\n    \"last_name\": \"McAfee\",\n    \"company_name\": \"Helios\"\n  },\n  {\n    \"id\": 1,\n    \"first_name\": \"Paul\",\n    \"last_name\": \"McAfee\",\n    \"company_name\": \"Helios\"\n  }\n]"
+									"body": "[\n  {\n    \"id\": 5,\n    \"first_name\": \"Paulie\",\n    \"last_name\": \"Magnet\",\n    \"company_name\": \"Apple\"\n  },\n  {\n    \"id\": 5,\n    \"first_name\": \"Paulie\",\n    \"last_name\": \"Magnet\",\n    \"company_name\": \"Apple\"\n  }\n]"
 								},
 								{
 									"name": "Bad input",
@@ -661,7 +661,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n  \"first_name\": \"Marvel\",\n  \"last_name\": \"Sonife\",\n  \"company_name\": \"Mercedes\"\n}",
+									"raw": "{\n  \"first_name\": \"Jeanne\",\n  \"last_name\": \"Ax\",\n  \"company_name\": \"lexus\"\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -678,7 +678,7 @@
 										"persons"
 									]
 								},
-								"description": "By putting the correct payload, you can create a new person in the system"
+								"description": "By putting the correct payload, you can create a new person"
 							},
 							"response": [
 								{
@@ -688,7 +688,7 @@
 										"header": [],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n  \"first_name\": \"Marvel\",\n  \"last_name\": \"Sonife\",\n  \"company_name\": \"Mercedes\"\n}",
+											"raw": "{\n  \"first_name\": \"Jeanne\",\n  \"last_name\": \"Ax\",\n  \"company_name\": \"lexus\"\n}",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -716,7 +716,7 @@
 										}
 									],
 									"cookie": [],
-									"body": "[\n  {\n    \"id\": 1,\n    \"first_name\": \"Paul\",\n    \"last_name\": \"McAfee\",\n    \"company_name\": \"Helios\"\n  },\n  {\n    \"id\": 1,\n    \"first_name\": \"Paul\",\n    \"last_name\": \"McAfee\",\n    \"company_name\": \"Helios\"\n  }\n]"
+									"body": "[\n  {\n    \"id\": 5,\n    \"first_name\": \"Paulie\",\n    \"last_name\": \"Magnet\",\n    \"company_name\": \"Apple\"\n  },\n  {\n    \"id\": 5,\n    \"first_name\": \"Paulie\",\n    \"last_name\": \"Magnet\",\n    \"company_name\": \"Apple\"\n  }\n]"
 								},
 								{
 									"name": "Bad input",
@@ -725,7 +725,7 @@
 										"header": [],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n  \"first_name\": \"Marvel\",\n  \"last_name\": \"Sonife\",\n  \"company_name\": \"Mercedes\"\n}",
+											"raw": "{\n  \"first_name\": \"Jeanne\",\n  \"last_name\": \"Ax\",\n  \"company_name\": \"lexus\"\n}",
 											"options": {
 												"raw": {
 													"language": "json"
